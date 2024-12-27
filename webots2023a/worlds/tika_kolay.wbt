@@ -1,0 +1,3301 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/adept/pioneer3/protos/Pioneer3dx.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/nvidia/jetbot/protos/JetBotRaspberryPiCamera.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/Grass.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/Soil.proto"
+
+WorldInfo {
+  title "Pioneer3at Ardupilot"
+  basicTimeStep 2
+  FPS 20
+}
+Viewpoint {
+  orientation 0.137295455183894 -0.3765230572372876 -0.9161770273012381 5.525619858761878
+  position -4.556018550187915 -7.390109220219252 2.854987222460773
+  followSmoothness 0.01
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+  size 300 100
+  appearance Grass {
+  }
+}
+Pioneer3dx {
+  hidden position_0_0 3.0088523563524916
+  hidden position_0_1 -0.039062637920794764
+  hidden position_0_2 -0.03218251074561059
+  hidden linearVelocity_0 4.086265785952163e-10 -6.55240683240442e-11 -3.353696676483776e-11
+  hidden angularVelocity_0 5.324284183438318e-10 1.0284673011485467e-10 1.8341445416392643e-09
+  hidden translation_1 -0.1918 0 0
+  hidden rotation_1 0.6283874093443761 0.5500587182914173 0.5500587879573116 2.0195296517984755
+  hidden position_1_0 3.7519555299627165
+  hidden linearVelocity_1 1.46114472688818e-10 4.160679885200527e-12 -9.821276935522489e-11
+  hidden angularVelocity_1 1.80511803664961e-09 -6.594071641468509e-09 1.5568965336125508e-07
+  hidden translation_2 0 -0.0521014 0.012843
+  hidden rotation_2 1 0 0 3.751955529962716
+  hidden linearVelocity_2 -1.3736029034334323e-09 -6.770419374593254e-11 -8.360215967274376e-11
+  hidden angularVelocity_2 -4.876849979891507e-08 -9.327635604345457e-09 1.5598901998140485e-07
+  hidden translation_4 0 0.165 0
+  hidden rotation_4 0.5847223203404008 -0.5847223216649722 -0.5623162941285466 2.1170927539346946
+  hidden linearVelocity_4 3.4656179513062565e-10 -3.5396669573425316e-10 6.170910349827029e-13
+  hidden angularVelocity_4 6.651663949606422e-10 1.2812852015283855e-10 1.8342058284446894e-09
+  hidden translation_9 0 -0.165 0
+  hidden rotation_9 0.5834448459690652 -0.5834448470615978 -0.5649639122540504 2.1130741794936267
+  hidden linearVelocity_9 2.333248755354552e-10 2.4053419016502853e-10 1.628930224294862e-13
+  hidden angularVelocity_9 4.4180662385252824e-10 8.559091773323191e-11 1.8342040378232442e-09
+  translation 0.004207700658791681 -4.3299675634054715 0.10741891641700602
+  rotation 0.02212632456924433 -0.018324398647628935 0.9995872359005287 1.7593800276278257
+  controller "ardupilot_vehicle_controller"
+  controllerArgs [
+    "--motors"
+    "left wheel, right wheel"
+    "--camera-fps"
+    "10"
+    "--motor-cap"
+    "100"
+    "--bidirectional-motors"
+    "true"
+    "--uses-propellers"
+    "false"
+  ]
+  extensionSlot [
+    JetBotRaspberryPiCamera {
+      translation 0.1 0 0.18
+    }
+    Accelerometer {
+    }
+    InertialUnit {
+    }
+    Gyro {
+    }
+    GPS {
+    }
+  ]
+}
+Group {
+  children [
+    Transform {
+      translation 0.83 -0.35 0.08
+      children [
+        Transform {
+          translation 2.89 0.35 -0.07
+          children [
+            Floor {
+              name "tasli_zemin"
+              size 8 1
+              appearance Soil {
+              }
+            }
+          ]
+        }
+        Transform {
+          children [
+            Solid {
+              translation 1.0804412919895867e-10 7.858125261606119e-11 -0.038763543516376266
+              rotation -7.743020258622158e-09 6.160175170076809e-09 0.9999999999999998 1.2552471208141684e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+              linearVelocity 1.5375821880251824e-18 1.1768763071238225e-19 1.6631327874371033e-15
+              angularVelocity 5.441755179604098e-18 4.3699244712098495e-17 -3.246702561397872e-19
+            }
+            Solid {
+              translation 0.6799999999999954 9.321319827115815e-10 -0.038763543516376266
+              rotation -6.9260468008832985e-09 9.30124780655152e-09 1 1.255246884809659e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul(1)"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+              linearVelocity 1.3107501866569509e-18 2.1347970058488e-19 1.6655939797512978e-15
+              angularVelocity -2.902267218304731e-17 5.599442190335588e-17 3.947876805892197e-19
+            }
+            Solid {
+              translation 1.1800000000000166 1.5596498537107095e-09 -0.038763543516376266
+              rotation -5.4925520831257036e-09 -8.789101782727954e-09 1 1.2552439550938453e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul(2)"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+              linearVelocity -1.9538900571859868e-18 3.522408669543237e-19 1.668537890723122e-15
+              angularVelocity -1.451133609081239e-17 -8.396678440101462e-17 3.808026581393926e-19
+            }
+            Solid {
+              translation 1.5699999999999998 2.0491026098135023e-09 -0.038763543516376266
+              rotation -6.417382143018745e-09 -8.322769596157518e-09 1 1.2552470048554313e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul(3)"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+              linearVelocity 5.364295752405951e-19 7.653456330404962e-19 1.6636091764912758e-15
+              angularVelocity -1.4511336091031687e-17 1.4016674708471003e-18 3.180034079169433e-19
+            }
+            Solid {
+              translation 2.41 3.1034326219980812e-09 -0.038763543516376266
+              rotation -6.417382143018745e-09 -8.322769596157518e-09 1 1.2552470048554313e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul(4)"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+              linearVelocity 5.364295752405951e-19 7.653456330404962e-19 1.6636091764912758e-15
+              angularVelocity -1.4511336091031687e-17 1.4016674708471003e-18 3.180034079169433e-19
+            }
+            Solid {
+              translation 3.99 5.0866226231072176e-09 -0.038763543516376266
+              rotation -6.417382143018745e-09 -8.322769596157518e-09 1 1.2552470048554313e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul(5)"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+              linearVelocity 5.364295752405951e-19 7.653456330404962e-19 1.6636091764912758e-15
+              angularVelocity -1.4511336091031687e-17 1.4016674708471003e-18 3.180034079169433e-19
+            }
+            Solid {
+              translation 4.39 5.588712603810109e-09 -0.038763543516376266
+              rotation -6.417382143018745e-09 -8.322769596157518e-09 1 1.2552470048554313e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul(6)"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+              linearVelocity 5.364295752405951e-19 7.653456330404962e-19 1.6636091764912758e-15
+              angularVelocity -1.4511336091031687e-17 1.4016674708471003e-18 3.180034079169433e-19
+            }
+            Solid {
+              translation 4.76 6.0531425982723874e-09 -0.038763543516376266
+              rotation -6.417382143018745e-09 -8.322769596157518e-09 1 1.2552470048554313e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul(7)"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+              linearVelocity 5.364295752405951e-19 7.653456330404962e-19 1.6636091764912758e-15
+              angularVelocity -1.4511336091031687e-17 1.4016674708471003e-18 3.180034079169433e-19
+            }
+            Solid {
+              translation 5.08 6.454822620849399e-09 -0.038763543516376266
+              rotation -6.417382143018745e-09 -8.322769596157518e-09 1 1.2552470048554313e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul(8)"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+              linearVelocity 5.364295752405951e-19 7.653456330404962e-19 1.6636091764912758e-15
+              angularVelocity -1.4511336091031687e-17 1.4016674708471003e-18 3.180034079169433e-19
+            }
+            Solid {
+              translation 5.5 6.981942635153615e-09 -0.038763543516376266
+              rotation -6.417382143018745e-09 -8.322769596157518e-09 1 1.2552470048554313e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul(9)"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+              linearVelocity 5.364295752405951e-19 7.653456330404962e-19 1.6636091764912758e-15
+              angularVelocity -1.4511336091031687e-17 1.4016674708471003e-18 3.180034079169433e-19
+            }
+            Solid {
+              translation 0.1832448386045743 -2.1137296788542592e-05 -0.020005417406550513
+              rotation -4.587202806889933e-14 -3.283672470750891e-14 -1 0.00042980623507475363
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+              linearVelocity 2.596174435903904e-18 1.8162049231550465e-18 1.223457628831373e-15
+              angularVelocity -3.161452790221894e-17 5.202568703144241e-17 -6.713082129224078e-18
+            }
+            Solid {
+              translation 0.43967775438186074 -0.0001270516746511019 -0.020005417406550492
+              rotation 4.829344613393188e-14 3.634543454240918e-14 -1 0.0004083365962521985
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(1)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+              linearVelocity 2.6641181593228603e-19 -2.95339563218033e-18 1.2233499905033728e-15
+              angularVelocity 8.616105803061413e-17 9.721597799238259e-18 6.6111360369526726e-18
+            }
+            Solid {
+              translation 0.9096779999999646 -0.00031895799999215324 -0.020005417406550492
+              rotation 5.4152653366827494e-14 -4.196713488001806e-14 -1 0.00040833659625004497
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(2)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+              linearVelocity -2.5984072495543467e-18 -4.189017977989901e-18 1.223356767391346e-15
+              angularVelocity 7.953328434557413e-17 -6.445251017149214e-17 -5.497606242392467e-18
+            }
+            Solid {
+              translation 1.829679999999986 -0.0006946159999907664 -0.020005417406550492
+              rotation 4.894076463994782e-14 4.5774758222939935e-14 -1 0.00040833659624113776
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(3)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+              linearVelocity -1.1577046418935775e-18 -6.768614968521515e-18 1.2210316777693723e-15
+              angularVelocity 1.4581102127949885e-16 -4.7546509385465476e-17 -1.2688808048402096e-18
+            }
+            Solid {
+              translation 2.0996799999999864 -0.0008048619999907469 -0.020005417406550492
+              rotation 4.894076463994782e-14 4.5774758222939935e-14 -1 0.00040833659624113776
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(4)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+              linearVelocity -1.1577046418935775e-18 -6.768614968521515e-18 1.2210316777693723e-15
+              angularVelocity 1.4581102127949885e-16 -4.7546509385465476e-17 -1.2688808048402096e-18
+            }
+            Solid {
+              translation 2.679679999999986 -0.0010416599999907294 -0.020005417406550492
+              rotation 4.894076463994782e-14 4.5774758222939935e-14 -1 0.00040833659624113776
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(5)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+              linearVelocity -1.1577046418935775e-18 -6.768614968521515e-18 1.2210316777693723e-15
+              angularVelocity 1.4581102127949885e-16 -4.7546509385465476e-17 -1.2688808048402096e-18
+            }
+            Solid {
+              translation 2.9796799999999863 -0.0011641399999907653 -0.020005417406550492
+              rotation 4.894076463994782e-14 4.5774758222939935e-14 -1 0.00040833659624113776
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(6)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+              linearVelocity -1.1577046418935775e-18 -6.768614968521515e-18 1.2210316777693723e-15
+              angularVelocity 1.4581102127949885e-16 -4.7546509385465476e-17 -1.2688808048402096e-18
+            }
+            Solid {
+              translation 3.2696799999999326 -0.0012825299999963402 -0.020005417406550492
+              rotation 3.530743815565276e-14 4.1714422923456023e-14 -1 0.00040833659624812425
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(7)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+              linearVelocity 1.5151867816278929e-18 3.3694030120719446e-18 1.2227265912129303e-15
+              angularVelocity -7.290551061895151e-17 3.5100016256302693e-17 1.4872082375328595e-18
+            }
+            Solid {
+              translation 3.679679999999932 -0.0014499199999963297 -0.020005417406550492
+              rotation 3.530743815565276e-14 4.1714422923456023e-14 -1 0.00040833659624812425
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(8)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+              linearVelocity 1.5151867816278929e-18 3.3694030120719446e-18 1.2227265912129303e-15
+              angularVelocity -7.290551061895151e-17 3.5100016256302693e-17 1.4872082375328595e-18
+            }
+            Solid {
+              translation 6.049679999999933 -0.0024176099999962952 -0.020005417406550492
+              rotation 3.530743815565276e-14 4.1714422923456023e-14 -1 0.00040833659624812425
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(10)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+              linearVelocity 1.5151867816278929e-18 3.3694030120719446e-18 1.2227265912129303e-15
+              angularVelocity -7.290551061895151e-17 3.5100016256302693e-17 1.4872082375328595e-18
+            }
+            Solid {
+              translation 6.249679999999932 -0.00249920999999631 -0.020005417406550492
+              rotation 3.530743815565276e-14 4.1714422923456023e-14 -1 0.00040833659624812425
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(11)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+              linearVelocity 1.5151867816278929e-18 3.3694030120719446e-18 1.2227265912129303e-15
+              angularVelocity -7.290551061895151e-17 3.5100016256302693e-17 1.4872082375328595e-18
+            }
+            Solid {
+              translation 5.769679999999933 -0.0023032699999963047 -0.020005417406550492
+              rotation 3.530743815565276e-14 4.1714422923456023e-14 -1 0.00040833659624812425
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(9)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+              linearVelocity 1.5151867816278929e-18 3.3694030120719446e-18 1.2227265912129303e-15
+              angularVelocity -7.290551061895151e-17 3.5100016256302693e-17 1.4872082375328595e-18
+            }
+          ]
+        }
+        Transform {
+          translation 6.26 0.699984 0
+          rotation 0 0 1 3.14159
+          children [
+            Solid {
+              translation 1.0804690475652023e-10 7.858230732793459e-11 -0.038763543516376266
+              rotation 7.943718183327512e-09 -2.0675261736866525e-09 1 1.2552447701885881e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul(2)"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 0.6799999999999997 9.321330374234549e-10 -0.038763543516376266
+              rotation 5.813681722802532e-09 2.1623733357288105e-10 1 1.2552447699061026e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul(3)"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 1.1799999999999997 1.5596500757553144e-09 -0.038763543516376266
+              rotation 5.813681722802532e-09 2.1623733357288105e-10 1 1.2552447699061026e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul(3)"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 1.5699999999999994 2.0491000563005457e-09 -0.038763543516376266
+              rotation 5.813681722802532e-09 2.1623733357288105e-10 1 1.2552447699061026e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul(3)"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 2.41 3.1034300684851246e-09 -0.038763543516376266
+              rotation 5.813681722802532e-09 2.1623733357288105e-10 1 1.2552447699061026e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul(3)"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 3.9899999999999998 5.08662001408311e-09 -0.038763543516376266
+              rotation -2.278693023218759e-09 -7.048591466384287e-09 1 1.255244767539069e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul(3)"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 4.39 5.588709994786001e-09 -0.038763543516376266
+              rotation -2.278693023218759e-09 -7.048591466384287e-09 1 1.255244767539069e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul(3)"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 4.759999999999999 6.053140044759431e-09 -0.038763543516376266
+              rotation -2.278693023218759e-09 -7.048591466384287e-09 1 1.255244767539069e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul(3)"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 5.08 6.454820067336442e-09 -0.038763543516376266
+              rotation -6.024357980814909e-09 8.941718291197716e-09 1 1.255244735003263e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul(3)"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 5.5 6.981940026129507e-09 -0.038763543516376266
+              rotation -1.7237953619948858e-09 -3.546958501222556e-09 1 1.2552447178389874e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul(3)"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 0.18324483860457352 -2.1137296782436366e-05 -0.020005417406550513
+              rotation -3.7521979243936155e-14 3.379433461313404e-14 -0.9999999999999999 0.0004298062350763901
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(2)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 0.4396777543818189 -0.00012705167464727163 -0.020005417406550513
+              rotation -5.0773041828946976e-14 -5.080533660381425e-15 -1 0.0004083365962525559
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(3)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 0.9096779999999995 -0.0003189579999999248 -0.020005417406550513
+              rotation 4.849169361959907e-14 1.9085200124939923e-14 -0.9999999999999999 0.0004083365962522316
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(3)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 1.8296799999999998 -0.0006946159999999812 -0.020005417406550513
+              rotation 4.849169361959907e-14 1.9085200124939923e-14 -0.9999999999999999 0.0004083365962522316
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(3)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 2.0996799999999993 -0.0008048619999999618 -0.020005417406550513
+              rotation 4.849169361959907e-14 1.9085200124939923e-14 -0.9999999999999999 0.0004083365962522316
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(3)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 2.6796799999999994 -0.0010416599999999443 -0.020005417406550513
+              rotation 4.849169361959907e-14 1.9085200124939923e-14 -0.9999999999999999 0.0004083365962522316
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(3)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 2.979679999999999 -0.0011641399999999802 -0.020005417406550513
+              rotation 1.0839338151070306e-14 1.310285027639273e-16 -1 0.0004083365962525619
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(3)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 3.2696799999999997 -0.0012825299999999484 -0.020005417406550513
+              rotation 2.5584624409154258e-14 -3.564410719426689e-14 -1 0.0004083365962525061
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(3)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 3.679679999999999 -0.0014499199999999934 -0.020005417406550513
+              rotation 4.874512188684995e-14 4.94020352238827e-14 -1 0.0004083365962526162
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(3)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 6.0496799999999995 -0.002417609999999959 -0.020005417406550513
+              rotation -5.102639221092016e-14 -3.577395052017546e-14 -1 0.0004083365962524462
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(3)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 6.24968 -0.002499209999999974 -0.020005417406550513
+              rotation 1.343896138241738e-14 -1.2627324971060034e-14 -1 0.0004083365962524502
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(3)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 5.769679999999999 -0.002303270000000024 -0.020005417406550513
+              rotation -5.102639221092016e-14 -3.577395052017546e-14 -1 0.0004083365962524462
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(3)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+            }
+          ]
+        }
+      ]
+    }
+    Transform {
+      translation 0.83 -2.11 0.08
+      children [
+        Transform {
+          translation 3.45 0.35 -0.07
+          children [
+            Floor {
+              name "tasli_zemin(1)"
+              size 8 1
+              appearance Soil {
+              }
+            }
+          ]
+        }
+        Transform {
+          children [
+            Solid {
+              translation 1.080479039572424e-10 7.858247386138828e-11 -0.038763543516376266
+              rotation 9.163358375644487e-09 6.669877698009098e-09 0.9999999999999999 1.2552447754085292e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul(2)"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 0.68 9.321330374234549e-10 -0.038763543516376266
+              rotation 8.79630713958643e-09 5.510329154569001e-09 1 1.2552447837901793e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul(3)"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 1.1799999999999997 1.559650186777617e-09 -0.038763543516376266
+              rotation -7.134148664521383e-09 -6.875281883467266e-09 1 1.2552447264603077e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul(3)"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 1.5699999999999998 2.0491000007893945e-09 -0.038763543516376266
+              rotation 8.287642509609633e-09 7.447131934698123e-09 1 1.255244764125571e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul(3)"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 2.41 3.103429957462822e-09 -0.038763543516376266
+              rotation 8.287642509609633e-09 7.447131934698123e-09 1 1.255244764125571e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul(3)"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 3.99 5.08662001408311e-09 -0.038763543516376266
+              rotation 8.287642509609633e-09 7.447131934698123e-09 1 1.255244764125571e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul(3)"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 4.39 5.58870993927485e-09 -0.038763543516376266
+              rotation 8.287642509609633e-09 7.447131934698123e-09 1 1.255244764125571e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul(3)"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 4.76 6.0531402112928845e-09 -0.038763543516376266
+              rotation 8.287642509609633e-09 7.447131934698123e-09 1 1.255244764125571e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul(3)"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 5.08 6.454819789780686e-09 -0.038763543516376266
+              rotation 8.287642509609633e-09 7.447131934698123e-09 1 1.255244764125571e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul(3)"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 5.5 6.981939915107205e-09 -0.038763543516376266
+              rotation 8.287642509609633e-09 7.447131934698123e-09 1 1.255244764125571e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul(3)"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 0.1832448386045743 -2.113729678265841e-05 -0.020005417406550513
+              rotation -8.199771182341443e-15 -1.0128842717071455e-14 -1 0.0004298062350764869
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(2)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 0.439677754381819 -0.00012705167464721612 -0.020005417406550492
+              rotation 5.486357639413234e-14 -2.606484671282959e-14 -1 0.00040833659625246117
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(3)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 0.9096780000000001 -0.0003189579999998138 -0.020005417406550492
+              rotation 6.876824915433708e-15 1.0485458027057328e-14 -0.9999999999999999 0.0004083365962524586
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(3)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 1.8296799999999998 -0.0006946160000000923 -0.020005417406550492
+              rotation 6.876824915433708e-15 1.0485458027057328e-14 -0.9999999999999999 0.0004083365962524586
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(3)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 2.09968 -0.0008048619999998508 -0.020005417406550492
+              rotation 6.876824915433708e-15 1.0485458027057328e-14 -0.9999999999999999 0.0004083365962524586
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(3)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 2.67968 -0.0010416599999998333 -0.020005417406550492
+              rotation 6.876824915433708e-15 1.0485458027057328e-14 -0.9999999999999999 0.0004083365962524586
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(3)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 2.97968 -0.0011641400000002022 -0.020005417406550492
+              rotation 6.876824915433708e-15 1.0485458027057328e-14 -0.9999999999999999 0.0004083365962524586
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(3)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 3.26968 -0.001282530000000115 -0.020005417406550492
+              rotation 6.876824915433708e-15 1.0485458027057328e-14 -0.9999999999999999 0.0004083365962524586
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(3)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 3.6796799999999994 -0.0014499200000002155 -0.020005417406550492
+              rotation 6.876824915433708e-15 1.0485458027057328e-14 -0.9999999999999999 0.0004083365962524586
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(3)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 6.04968 -0.002417610000000181 -0.020005417406550492
+              rotation 6.876824915433708e-15 1.0485458027057328e-14 -0.9999999999999999 0.0004083365962524586
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(3)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 6.24968 -0.002499209999999863 -0.020005417406550492
+              rotation 6.876824915433708e-15 1.0485458027057328e-14 -0.9999999999999999 0.0004083365962524586
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(3)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 5.76968 -0.0023032700000000794 -0.020005417406550492
+              rotation 6.876824915433708e-15 1.0485458027057328e-14 -0.9999999999999999 0.0004083365962524586
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(3)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 6.26 0.699984 0
+          rotation 0 0 1 3.14159
+          children [
+            Solid {
+              translation 1.0804690475652023e-10 7.858225181678336e-11 -0.038763543516376266
+              rotation -2.1602356638246343e-09 6.1657501806784805e-09 1 1.2552447406127387e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul(3)"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 0.6799999999999997 9.321330374234549e-10 -0.038763543516376266
+              rotation 8.935017015605972e-09 6.47635253867092e-09 1 1.2552447806646916e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul(3)"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 1.1799999999999997 1.559649964733012e-09 -0.038763543516376266
+              rotation 8.935017015605972e-09 6.47635253867092e-09 1 1.2552447806646916e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul(3)"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 1.5699999999999994 2.0491000007893945e-09 -0.038763543516376266
+              rotation 8.935017015605972e-09 6.47635253867092e-09 1 1.2552447806646916e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul(3)"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 2.41 3.103429957462822e-09 -0.038763543516376266
+              rotation 8.935017015605972e-09 6.47635253867092e-09 1 1.2552447806646916e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul(3)"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 3.9899999999999998 5.08662001408311e-09 -0.038763543516376266
+              rotation -8.267089179116731e-09 2.1440716251598784e-09 1 1.2552447393536242e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul(3)"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 4.39 5.58870993927485e-09 -0.038763543516376266
+              rotation -8.267089179116731e-09 2.1440716251598784e-09 1 1.2552447393536242e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul(3)"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 4.759999999999999 6.053139767203675e-09 -0.038763543516376266
+              rotation -8.267089179116731e-09 2.1440716251598784e-09 1 1.2552447393536242e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul(3)"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 5.08 6.454820011825291e-09 -0.038763543516376266
+              rotation -7.226655969769328e-09 8.776762131056137e-09 1 1.2552447604095928e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul(3)"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 5.5 6.981939915107205e-09 -0.038763543516376266
+              rotation 4.750111584628763e-09 -3.573532958206381e-10 1 1.2552447368840997e-09
+              scale 0.005 0.005 0.005
+              children [
+                Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                    texture ImageTexture {
+                      url [
+                        "../obj/tika/marul/LettuceBibb.jpg"
+                      ]
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../obj/tika/marul/marul.obj"
+                    ]
+                  }
+                }
+              ]
+              name "marul(3)"
+              boundingObject Cylinder {
+                height 12.5
+                radius 15
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 0.18324483860457352 -2.113729678265841e-05 -0.020005417406550513
+              rotation 1.1207700205086295e-14 2.7864025267074484e-14 -1 0.0004298062350764305
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(3)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 0.4396777543818189 -0.00012705167464743816 -0.020005417406550513
+              rotation -9.27804645091555e-15 -4.4571509238747894e-14 -1 0.0004083365962525039
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(3)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 0.9096779999999995 -0.00031895800000025787 -0.020005417406550513
+              rotation 4.6557549479995657e-14 -4.6644079337918756e-14 -1 0.00040833659625257344
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(3)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 1.8296799999999998 -0.0006946160000000923 -0.020005417406550513
+              rotation 4.6557549479995657e-14 -4.6644079337918756e-14 -1 0.00040833659625257344
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(3)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 2.0996799999999993 -0.0008048620000000728 -0.020005417406550513
+              rotation 4.6557549479995657e-14 -4.6644079337918756e-14 -1 0.00040833659625257344
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(3)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 2.6796799999999994 -0.0010416600000000553 -0.020005417406550513
+              rotation 4.6557549479995657e-14 -4.6644079337918756e-14 -1 0.00040833659625257344
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(3)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 2.979679999999999 -0.0011641400000002022 -0.020005417406550513
+              rotation 4.6557549479995657e-14 -4.6644079337918756e-14 -1 0.00040833659625257344
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(3)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 3.2696799999999997 -0.001282530000000115 -0.020005417406550513
+              rotation 4.098100839414371e-15 -5.267988119195536e-14 -1 0.0004083365962524343
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(3)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 3.679679999999999 -0.0014499200000002155 -0.020005417406550513
+              rotation 4.098100839414371e-15 -5.267988119195536e-14 -1 0.0004083365962524343
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(3)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 6.0496799999999995 -0.002417610000000181 -0.020005417406550513
+              rotation 3.6882723950780366e-14 -4.1527719263490165e-14 -1 0.0004083365962522707
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(3)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 6.24968 -0.002499209999999863 -0.020005417406550513
+              rotation 4.5257758169983004e-14 -4.036308205328168e-14 -1 0.0004083365962525337
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(3)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+            }
+            Solid {
+              translation 5.769679999999999 -0.0023032699999998574 -0.020005417406550513
+              rotation 3.6882723950780366e-14 -4.1527719263490165e-14 -1 0.0004083365962522707
+              scale 0.005 0.005 0.005
+              children [
+                Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                        texture ImageTexture {
+                          url [
+                            "../obj/tika/romanya_marulu/LettuceRomaine.jpg"
+                          ]
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../obj/tika/romanya_marulu/romanya_marulu.obj"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+              name "romanya_marulu(3)"
+              boundingObject Transform {
+                translation 0 -7.5 0
+                children [
+                  Cylinder {
+                    height 20
+                    radius 7.5
+                  }
+                ]
+              }
+              physics Physics {
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

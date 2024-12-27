@@ -30,3 +30,9 @@ Bu repoda yarışmayla ilgili kuralları ardupilot tabanlı kart üzerinden habe
 
 ### Zor Görevi
 ![en_zor](./docs/ida/ida_en_zor.jpg)
+
+## Tarımsal İnsansız Kara Aracı Yarışması
+
+### Kolay Görev
+
+![tika_kolay](./docs/tika/tika_kolay_1.png)
