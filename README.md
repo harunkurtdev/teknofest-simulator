@@ -4,11 +4,17 @@
 
 Arkadaşlar bu yarışma simülatörü tamamen Ardupilot ile Webots2023a kullanarak çalışmalarınızı hızlandıracak alt yapı sunmaktadır.
 
+Tarımsal İnsansız Kara Aracı Yarışması
+İnsansız Deniz Aracı Yarışması
+Drone ile ilgili yarışmalar
+
+---
 ```js
-- İnsansız Hava Aracı
+- İnsansız Hava Aracı (Drone)
 - İnsansız Arazi Aracı
 - İnsansız Deniz Aracı
 ```
+---
 
 Bulunmaktadır.
 
