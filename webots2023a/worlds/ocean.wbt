@@ -9,8 +9,8 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/project
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.12578533399187541 0.030860296866712676 -0.9915773756141529 2.9389002097423984
-  position 74.91271343832429 13.395803043714013 20.273201443467215
+  orientation -0.2900947562686516 0.02107723720295411 0.956765792896737 2.914587047372218
+  position 11.131202214902423 -16.81403978256629 5.0640796912916
   follow "blueboat:NVIDIA Jetson Nano"
   followType "Mounted Shot"
 }
@@ -40,11 +40,1266 @@ DEF WATER Fluid {
   }
   locked TRUE
 }
+Solid {
+  translation 0 0 -0.3
+  name "plane"
+  boundingObject Plane {
+    size 1000 1000
+  }
+}
+LandscapePainting {
+  translation -11.33 -9.5 2.1
+  rotation 1 0 0 -1.57
+  textureUrl [
+    "../obj/images/image3.png"
+  ]
+}
+LandscapePainting {
+  translation -11.33 -12.03 2.11
+  rotation 1 0 0 -1.57
+  name "landscape painting(1)"
+  textureUrl [
+    "../obj/images/image2.jpeg"
+  ]
+}
+LandscapePainting {
+  translation -11.33 -14.46 2.12
+  rotation 1 0 0 -1.57
+  name "landscape painting(2)"
+  textureUrl [
+    "../obj/images/image1.png"
+  ]
+}
+DEF bals Transform {
+  translation 0 -6.64 0.3
+  children [
+    DEF green_bals Transform {
+      translation 0 -6.61 0.3
+      children [
+        Group {
+          children [
+            Solid {
+              translation 15.24249999999998 0.04841500000040355 -0.20333329618773666
+              rotation 0.9988792832466199 0.04733051342124929 -2.560246558963939e-15 3.141592653589791
+              children [
+                DEF BallShape Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.14902 0.635294 0.411765
+                    metalness 0
+                  }
+                  geometry Capsule {
+                    height 0.4
+                    radius 0.1
+                  }
+                }
+              ]
+              name "ball(2)8"
+              immersionProperties [
+                ImmersionProperties {
+                  fluidName "fluid"
+                }
+              ]
+              boundingObject Capsule {
+                height 0.4
+                radius 0.05
+                subdivision 16
+              }
+              physics Physics {
+                density 400
+                centerOfMass [
+                  0 0 1
+                ]
+                damping Damping {
+                  linear 0.5
+                  angular 0.5
+                }
+              }
+              linearVelocity 0 0 3.9666414106596734e-07
+              angularVelocity 1.1713896945664326e-14 -1.2210654553444456e-13 -3.940114997462256e-27
+            }
+            Solid {
+              translation 13.754699999999984 -0.09246719999959652 -0.20333329618773666
+              rotation 0.9988792832466199 0.04733051342124929 -4.315625193401649e-15 3.141592653589791
+              children [
+                DEF BallShape Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.14902 0.635294 0.411765
+                    metalness 0
+                  }
+                  geometry Capsule {
+                    height 0.4
+                    radius 0.1
+                  }
+                }
+              ]
+              name "ball(2)8(1)"
+              immersionProperties [
+                ImmersionProperties {
+                  fluidName "fluid"
+                }
+              ]
+              boundingObject Capsule {
+                height 0.4
+                radius 0.05
+                subdivision 16
+              }
+              physics Physics {
+                density 400
+                centerOfMass [
+                  0 0 1
+                ]
+                damping Damping {
+                  linear 0.5
+                  angular 0.5
+                }
+              }
+              linearVelocity 0 0 3.9666414106596734e-07
+              angularVelocity 9.868116395958004e-15 -3.2442172216804674e-14 -1.5478992556145484e-28
+            }
+            Solid {
+              translation 12.040099999999976 -0.1446699999995964 -0.20333329618773666
+              rotation 0.9988792832466199 0.04733051342124929 2.376378015891056e-16 3.1415926535897896
+              children [
+                DEF BallShape Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.14902 0.635294 0.411765
+                    metalness 0
+                  }
+                  geometry Capsule {
+                    height 0.4
+                    radius 0.1
+                  }
+                }
+              ]
+              name "ball(2)8(2)"
+              immersionProperties [
+                ImmersionProperties {
+                  fluidName "fluid"
+                }
+              ]
+              boundingObject Capsule {
+                height 0.4
+                radius 0.05
+                subdivision 16
+              }
+              physics Physics {
+                density 400
+                centerOfMass [
+                  0 0 1
+                ]
+                damping Damping {
+                  linear 0.5
+                  angular 0.5
+                }
+              }
+              linearVelocity 0 0 3.9666414106596734e-07
+              angularVelocity -1.0601850040938027e-13 -5.519042796136688e-14 -1.7891615734520893e-27
+            }
+            Solid {
+              translation 10.515799999999967 -0.05847679999959965 -0.20333329618773666
+              rotation 0.9988792832466199 0.04733051342124929 4.589613145224943e-15 3.1415926535897922
+              children [
+                DEF BallShape Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.14902 0.635294 0.411765
+                    metalness 0
+                  }
+                  geometry Capsule {
+                    height 0.4
+                    radius 0.1
+                  }
+                }
+              ]
+              name "ball(2)8(3)"
+              immersionProperties [
+                ImmersionProperties {
+                  fluidName "fluid"
+                }
+              ]
+              boundingObject Capsule {
+                height 0.4
+                radius 0.05
+                subdivision 16
+              }
+              physics Physics {
+                density 400
+                centerOfMass [
+                  0 0 1
+                ]
+                damping Damping {
+                  linear 0.5
+                  angular 0.5
+                }
+              }
+              linearVelocity 0 0 3.9666414106596734e-07
+              angularVelocity -1.1223202385967451e-13 -2.3340418686514003e-13 1.3102931109676177e-26
+            }
+            Solid {
+              translation 7.973429999999975 -0.048814799999599146 -0.20333329618773666
+              rotation 0.9988792832466199 0.04733051342124929 3.9298001080995976e-16 3.1415926535897905
+              children [
+                DEF BallShape Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.14902 0.635294 0.411765
+                    metalness 0
+                  }
+                  geometry Capsule {
+                    height 0.4
+                    radius 0.1
+                  }
+                }
+              ]
+              name "ball(2)8(4)"
+              immersionProperties [
+                ImmersionProperties {
+                  fluidName "fluid"
+                }
+              ]
+              boundingObject Capsule {
+                height 0.4
+                radius 0.05
+                subdivision 16
+              }
+              physics Physics {
+                density 400
+                centerOfMass [
+                  0 0 1
+                ]
+                damping Damping {
+                  linear 0.5
+                  angular 0.5
+                }
+              }
+              linearVelocity 0 0 3.9666414106596734e-07
+              angularVelocity -8.274561810938891e-14 -2.918481995190002e-14 1.3559655474697805e-29
+            }
+            Solid {
+              translation 6.768589999999976 -0.16324499999959663 -0.20333329618773666
+              rotation 0.9988792832466199 0.04733051342124929 -1.2866871926219192e-16 3.1415926535897887
+              children [
+                DEF BallShape Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.14902 0.635294 0.411765
+                    metalness 0
+                  }
+                  geometry Capsule {
+                    height 0.4
+                    radius 0.1
+                  }
+                }
+              ]
+              name "ball(2)8(5)"
+              immersionProperties [
+                ImmersionProperties {
+                  fluidName "fluid"
+                }
+              ]
+              boundingObject Capsule {
+                height 0.4
+                radius 0.05
+                subdivision 16
+              }
+              physics Physics {
+                density 400
+                centerOfMass [
+                  0 0 1
+                ]
+                damping Damping {
+                  linear 0.5
+                  angular 0.5
+                }
+              }
+              linearVelocity 0 0 3.9666414106596734e-07
+              angularVelocity -2.2436949685306197e-14 4.38977554870221e-14 2.7962293502783523e-27
+            }
+            Solid {
+              translation 4.988019999999975 -0.2419519999996087 -0.20333329618773666
+              rotation 0.9988792832466199 0.04733051342124929 5.828588012820502e-16 -3.1415926535897847
+              children [
+                DEF BallShape Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.14902 0.635294 0.411765
+                    metalness 0
+                  }
+                  geometry Capsule {
+                    height 0.4
+                    radius 0.1
+                  }
+                }
+              ]
+              name "ball(2)8(6)"
+              immersionProperties [
+                ImmersionProperties {
+                  fluidName "fluid"
+                }
+              ]
+              boundingObject Capsule {
+                height 0.4
+                radius 0.05
+                subdivision 16
+              }
+              physics Physics {
+                density 400
+                centerOfMass [
+                  0 0 1
+                ]
+                damping Damping {
+                  linear 0.5
+                  angular 0.5
+                }
+              }
+              linearVelocity 0 0 3.9666414106596734e-07
+              angularVelocity 1.2447999440140507e-13 3.087084167834984e-14 -5.200507839284895e-27
+            }
+            Solid {
+              translation 3.6898499999999745 -0.11412399999960243 -0.20333329618773666
+              rotation 0.9988792832466199 0.04733051342124929 4.159832157459658e-16 -3.1415926535897913
+              children [
+                DEF BallShape Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.14902 0.635294 0.411765
+                    metalness 0
+                  }
+                  geometry Capsule {
+                    height 0.4
+                    radius 0.1
+                  }
+                }
+              ]
+              name "ball(2)8(7)"
+              immersionProperties [
+                ImmersionProperties {
+                  fluidName "fluid"
+                }
+              ]
+              boundingObject Capsule {
+                height 0.4
+                radius 0.05
+                subdivision 16
+              }
+              physics Physics {
+                density 400
+                centerOfMass [
+                  0 0 1
+                ]
+                damping Damping {
+                  linear 0.5
+                  angular 0.5
+                }
+              }
+              linearVelocity 0 0 3.9666414106596734e-07
+              angularVelocity -1.1110362194626633e-13 -1.408469041877152e-14 1.5424488333151067e-27
+            }
+            Solid {
+              translation 1.7322599999999755 -0.12928699999959647 -0.20333329618773666
+              rotation 0.9988792832466199 0.04733051342124929 3.7009009752341534e-17 3.1415926535897905
+              children [
+                DEF BallShape Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.14902 0.635294 0.411765
+                    metalness 0
+                  }
+                  geometry Capsule {
+                    height 0.4
+                    radius 0.1
+                  }
+                }
+              ]
+              name "ball(2)8(8)"
+              immersionProperties [
+                ImmersionProperties {
+                  fluidName "fluid"
+                }
+              ]
+              boundingObject Capsule {
+                height 0.4
+                radius 0.05
+                subdivision 16
+              }
+              physics Physics {
+                density 400
+                centerOfMass [
+                  0 0 1
+                ]
+                damping Damping {
+                  linear 0.5
+                  angular 0.5
+                }
+              }
+              linearVelocity 0 0 3.9666414106596734e-07
+              angularVelocity -8.014217633938173e-14 -2.924650943861171e-15 1.2260531010808966e-28
+            }
+            Solid {
+              translation 0.667008999999976 -0.23045599999959876 -0.20333329618773666
+              rotation 0.9988792832466199 0.04733051342124929 -1.983445471570646e-16 3.141592653589792
+              children [
+                DEF BallShape Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.14902 0.635294 0.411765
+                    metalness 0
+                  }
+                  geometry Capsule {
+                    height 0.4
+                    radius 0.1
+                  }
+                }
+              ]
+              name "ball(2)8(9)"
+              immersionProperties [
+                ImmersionProperties {
+                  fluidName "fluid"
+                }
+              ]
+              boundingObject Capsule {
+                height 0.4
+                radius 0.05
+                subdivision 16
+              }
+              physics Physics {
+                density 400
+                centerOfMass [
+                  0 0 1
+                ]
+                damping Damping {
+                  linear 0.5
+                  angular 0.5
+                }
+              }
+              linearVelocity 0 0 3.9666414106596734e-07
+              angularVelocity -1.144606815392704e-13 3.693850109222423e-15 -4.506678595784295e-28
+            }
+            Solid {
+              translation -0.5256660000000242 -0.15290299999960233 -0.20333329618773666
+              rotation 0.9988792832466199 0.04733051342124929 -5.211781203851141e-17 -3.141592653589792
+              children [
+                DEF BallShape Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.14902 0.635294 0.411765
+                    metalness 0
+                  }
+                  geometry Capsule {
+                    height 0.4
+                    radius 0.1
+                  }
+                }
+              ]
+              name "ball(2)8(10)"
+              immersionProperties [
+                ImmersionProperties {
+                  fluidName "fluid"
+                }
+              ]
+              boundingObject Capsule {
+                height 0.4
+                radius 0.05
+                subdivision 16
+              }
+              physics Physics {
+                density 400
+                centerOfMass [
+                  0 0 1
+                ]
+                damping Damping {
+                  linear 0.5
+                  angular 0.5
+                }
+              }
+              linearVelocity 0 0 3.9666414106596734e-07
+              angularVelocity -1.6660238497670057e-13 5.861885052847982e-15 -5.0095118191629e-28
+            }
+          ]
+        }
+      ]
+    }
+    DEF yellow_bals Transform {
+      translation 0 -8.81 0.3
+      children [
+        Group {
+          children [
+            Solid {
+              translation 14.958746157246166 1.640339725014904 -0.1961799656226746
+              rotation -0.0005503036178824301 -0.0003962578488465345 0.9999997700727962 1.9089867725751029
+              children [
+                DEF BallShape Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.972549 0.894118 0.360784
+                    metalness 0
+                  }
+                  geometry Capsule {
+                    height 0.4
+                    radius 0.1
+                  }
+                }
+              ]
+              name "yellow_ball"
+              immersionProperties [
+                ImmersionProperties {
+                  fluidName "fluid"
+                }
+              ]
+              boundingObject Capsule {
+                height 0.4
+                radius 0.1
+                subdivision 16
+              }
+              physics Physics {
+                density 400
+                centerOfMass [
+                  0 0 -1
+                ]
+                damping Damping {
+                  linear 0.5
+                  angular 0.5
+                }
+              }
+              linearVelocity 0 0 0.009253958720293443
+              angularVelocity -0.0019499011704020817 0.2510454314693612 -9.281556431335013e-15
+            }
+            Solid {
+              translation 12.1142 -0.493803 -0.19934
+              rotation -0.0005503036178824301 -0.0003962578488465345 0.9999997700727962 1.9089867725751029
+              children [
+                DEF BallShape Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.972549 0.894118 0.360784
+                    metalness 0
+                  }
+                  geometry Capsule {
+                    height 0.4
+                    radius 0.1
+                  }
+                }
+              ]
+              name "yellow_ball(1)"
+              immersionProperties [
+                ImmersionProperties {
+                  fluidName "fluid"
+                }
+              ]
+              boundingObject Capsule {
+                height 0.4
+                radius 0.1
+                subdivision 16
+              }
+              physics Physics {
+                density 400
+                centerOfMass [
+                  0 0 -1
+                ]
+                damping Damping {
+                  linear 0.5
+                  angular 0.5
+                }
+              }
+            }
+            Solid {
+              translation 7.75484 1.5028 -0.204135
+              rotation -0.0005503036178824301 -0.0003962578488465345 0.9999997700727962 1.9089867725751029
+              children [
+                DEF BallShape Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.972549 0.894118 0.360784
+                    metalness 0
+                  }
+                  geometry Capsule {
+                    height 0.4
+                    radius 0.1
+                  }
+                }
+              ]
+              name "yellow_ball(2)"
+              immersionProperties [
+                ImmersionProperties {
+                  fluidName "fluid"
+                }
+              ]
+              boundingObject Capsule {
+                height 0.4
+                radius 0.1
+                subdivision 16
+              }
+              physics Physics {
+                density 400
+                centerOfMass [
+                  0 0 -1
+                ]
+                damping Damping {
+                  linear 0.5
+                  angular 0.5
+                }
+              }
+            }
+            Solid {
+              translation 5.06936 -0.597161 -0.20715
+              rotation -0.0005503036178824301 -0.0003962578488465345 0.9999997700727962 1.9089867725751029
+              children [
+                DEF BallShape Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.972549 0.894118 0.360784
+                    metalness 0
+                  }
+                  geometry Capsule {
+                    height 0.4
+                    radius 0.1
+                  }
+                }
+              ]
+              name "yellow_ball(3)"
+              immersionProperties [
+                ImmersionProperties {
+                  fluidName "fluid"
+                }
+              ]
+              boundingObject Capsule {
+                height 0.4
+                radius 0.1
+                subdivision 16
+              }
+              physics Physics {
+                density 400
+                centerOfMass [
+                  0 0 -1
+                ]
+                damping Damping {
+                  linear 0.5
+                  angular 0.5
+                }
+              }
+            }
+            Solid {
+              translation 1.43197 0.190597 -0.211163
+              rotation -0.0005503036178824301 -0.0003962578488465345 0.9999997700727962 1.9089867725751029
+              children [
+                DEF BallShape Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.972549 0.894118 0.360784
+                    metalness 0
+                  }
+                  geometry Capsule {
+                    height 0.4
+                    radius 0.1
+                  }
+                }
+              ]
+              name "yellow_ball(4)"
+              immersionProperties [
+                ImmersionProperties {
+                  fluidName "fluid"
+                }
+              ]
+              boundingObject Capsule {
+                height 0.4
+                radius 0.1
+                subdivision 16
+              }
+              physics Physics {
+                density 400
+                centerOfMass [
+                  0 0 -1
+                ]
+                damping Damping {
+                  linear 0.5
+                  angular 0.5
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+    DEF red_bals Transform {
+      translation 0 -10.27 0.3
+      children [
+        Group {
+          children [
+            Solid {
+              translation -0.22241199999999994 -0.0002278372684472174 -0.19666118628101326
+              rotation 1 1.3897198501583391e-09 1.6476714920362823e-11 3.20407400493385e-08
+              children [
+                DEF BallShape Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.776471 0.27451 0
+                    metalness 0
+                  }
+                  geometry Capsule {
+                    height 0.4
+                    radius 0.1
+                  }
+                }
+              ]
+              name "ball"
+              immersionProperties [
+                ImmersionProperties {
+                  fluidName "fluid"
+                }
+              ]
+              boundingObject Capsule {
+                height 0.4
+                radius 0.1
+                subdivision 16
+              }
+              physics Physics {
+                density 400
+                centerOfMass [
+                  0 0 -1
+                ]
+                damping Damping {
+                  linear 0.5
+                  angular 0.5
+                }
+              }
+              linearVelocity 0 0 -2.7742777729215677e-05
+              angularVelocity 6.834310538278087e-07 -2.3358843857669057e-15 4.84819285451718e-22
+            }
+            Solid {
+              translation 0.9275900000000005 -0.0002278371486106323 -0.19666119878014998
+              rotation 0.9999999999999999 1.2980851742849345e-08 1.7081376698883998e-11 3.204071356323128e-08
+              children [
+                DEF BallShape Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.776471 0.27451 0
+                    metalness 0
+                  }
+                  geometry Capsule {
+                    height 0.4
+                    radius 0.1
+                  }
+                }
+              ]
+              name "ball_red"
+              immersionProperties [
+                ImmersionProperties {
+                  fluidName "fluid"
+                }
+              ]
+              boundingObject Capsule {
+                height 0.4
+                radius 0.1
+                subdivision 16
+              }
+              physics Physics {
+                density 400
+                centerOfMass [
+                  0 0 -1
+                ]
+                damping Damping {
+                  linear 0.5
+                  angular 0.5
+                }
+              }
+              linearVelocity 0 0 -2.767950467022178e-05
+              angularVelocity 6.834312227754634e-07 1.2790512615737937e-14 -5.782706435374727e-22
+            }
+            Solid {
+              translation 1.9475900000000015 -0.0002278371486106323 -0.19666119878014998
+              rotation 0.9999999999999988 4.82763681166754e-08 1.6577391302906864e-11 3.2040713563231316e-08
+              children [
+                DEF BallShape Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.776471 0.27451 0
+                    metalness 0
+                  }
+                  geometry Capsule {
+                    height 0.4
+                    radius 0.1
+                  }
+                }
+              ]
+              name "ball_red(1)"
+              immersionProperties [
+                ImmersionProperties {
+                  fluidName "fluid"
+                }
+              ]
+              boundingObject Capsule {
+                height 0.4
+                radius 0.1
+                subdivision 16
+              }
+              physics Physics {
+                density 400
+                centerOfMass [
+                  0 0 -1
+                ]
+                damping Damping {
+                  linear 0.5
+                  angular 0.5
+                }
+              }
+              linearVelocity 0 0 -2.767950467022178e-05
+              angularVelocity 6.834312227754634e-07 1.2014261380385384e-14 3.0956222127843865e-21
+            }
+            Solid {
+              translation 3.847590000000003 -0.0002278371486106323 -0.19666119878014998
+              rotation 0.9999999999999951 9.928049765546055e-08 1.9322360778055196e-11 3.2040713563231435e-08
+              children [
+                DEF BallShape Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.776471 0.27451 0
+                    metalness 0
+                  }
+                  geometry Capsule {
+                    height 0.4
+                    radius 0.1
+                  }
+                }
+              ]
+              name "ball_red(2)"
+              immersionProperties [
+                ImmersionProperties {
+                  fluidName "fluid"
+                }
+              ]
+              boundingObject Capsule {
+                height 0.4
+                radius 0.1
+                subdivision 16
+              }
+              physics Physics {
+                density 400
+                centerOfMass [
+                  0 0 -1
+                ]
+                damping Damping {
+                  linear 0.5
+                  angular 0.5
+                }
+              }
+              linearVelocity 0 0 -2.767950467022178e-05
+              angularVelocity 6.834312227754634e-07 4.492928023750075e-14 3.3822932241322644e-21
+            }
+            Solid {
+              translation 5.167590000000002 -0.0002278371486106323 -0.19666119878014998
+              rotation 0.9999999999999973 7.165599465925924e-08 2.1980776255654276e-11 3.204071356323136e-08
+              children [
+                DEF BallShape Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.776471 0.27451 0
+                    metalness 0
+                  }
+                  geometry Capsule {
+                    height 0.4
+                    radius 0.1
+                  }
+                }
+              ]
+              name "ball_red(3)"
+              immersionProperties [
+                ImmersionProperties {
+                  fluidName "fluid"
+                }
+              ]
+              boundingObject Capsule {
+                height 0.4
+                radius 0.1
+                subdivision 16
+              }
+              physics Physics {
+                density 400
+                centerOfMass [
+                  0 0 -1
+                ]
+                damping Damping {
+                  linear 0.5
+                  angular 0.5
+                }
+              }
+              linearVelocity 0 0 -2.767950467022178e-05
+              angularVelocity 6.834312227754634e-07 1.9360226615223753e-14 4.369384141422681e-21
+            }
+            Solid {
+              translation 6.857590000000001 -0.0002278371486106323 -0.19666119878014998
+              rotation 0.9999999999999996 2.3985772419051585e-08 2.349182541098118e-11 3.204071356323129e-08
+              children [
+                DEF BallShape Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.776471 0.27451 0
+                    metalness 0
+                  }
+                  geometry Capsule {
+                    height 0.4
+                    radius 0.1
+                  }
+                }
+              ]
+              name "ball_red(4)"
+              immersionProperties [
+                ImmersionProperties {
+                  fluidName "fluid"
+                }
+              ]
+              boundingObject Capsule {
+                height 0.4
+                radius 0.1
+                subdivision 16
+              }
+              physics Physics {
+                density 400
+                centerOfMass [
+                  0 0 -1
+                ]
+                damping Damping {
+                  linear 0.5
+                  angular 0.5
+                }
+              }
+              linearVelocity 0 0 -2.767950467022178e-05
+              angularVelocity 6.834312227754634e-07 9.936421367570684e-15 9.526511661819969e-22
+            }
+            Solid {
+              translation 8.387590000000003 -0.0002278371486106323 -0.19666119878014998
+              rotation 0.9999999999999911 1.3342329797693051e-07 2.7274506409479887e-11 3.204071356323156e-08
+              children [
+                DEF BallShape Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.776471 0.27451 0
+                    metalness 0
+                  }
+                  geometry Capsule {
+                    height 0.4
+                    radius 0.1
+                  }
+                }
+              ]
+              name "ball_red(5)"
+              immersionProperties [
+                ImmersionProperties {
+                  fluidName "fluid"
+                }
+              ]
+              boundingObject Capsule {
+                height 0.4
+                radius 0.1
+                subdivision 16
+              }
+              physics Physics {
+                density 400
+                centerOfMass [
+                  0 0 -1
+                ]
+                damping Damping {
+                  linear 0.5
+                  angular 0.5
+                }
+              }
+              linearVelocity 0 0 -2.767950467022178e-05
+              angularVelocity 6.834312227754634e-07 -2.9521054031546206e-15 1.389058254928703e-20
+            }
+            Solid {
+              translation 10.386269052421031 -0.010322433660803654 -0.19658390378844837
+              rotation 0.038369179720448544 -0.9992125317192492 0.01010556791024352 0.00021678988665199385
+              children [
+                DEF BallShape Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.776471 0.27451 0
+                    metalness 0
+                  }
+                  geometry Capsule {
+                    height 0.4
+                    radius 0.1
+                  }
+                }
+              ]
+              name "ball_red(6)"
+              immersionProperties [
+                ImmersionProperties {
+                  fluidName "fluid"
+                }
+              ]
+              boundingObject Capsule {
+                height 0.4
+                radius 0.1
+                subdivision 16
+              }
+              physics Physics {
+                density 400
+                centerOfMass [
+                  0 0 -1
+                ]
+                damping Damping {
+                  linear 0.5
+                  angular 0.5
+                }
+              }
+              linearVelocity -0.00023005704196311122 -8.886401844455371e-06 -0.0002144542192174072
+              angularVelocity -0.0009415206114783395 0.024359082125512972 3.6864167899288353e-09
+            }
+            Solid {
+              translation 12.197600000000005 -0.0002278371486106323 -0.19666119878014998
+              rotation 0.999999999999982 1.895655581960621e-07 3.5664084368244473e-11 3.204071356323185e-08
+              children [
+                DEF BallShape Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.776471 0.27451 0
+                    metalness 0
+                  }
+                  geometry Capsule {
+                    height 0.4
+                    radius 0.1
+                  }
+                }
+              ]
+              name "ball_red(7)"
+              immersionProperties [
+                ImmersionProperties {
+                  fluidName "fluid"
+                }
+              ]
+              boundingObject Capsule {
+                height 0.4
+                radius 0.1
+                subdivision 16
+              }
+              physics Physics {
+                density 400
+                centerOfMass [
+                  0 0 -1
+                ]
+                damping Damping {
+                  linear 0.5
+                  angular 0.5
+                }
+              }
+              linearVelocity 0 0 -2.767950467022178e-05
+              angularVelocity 6.834312227754634e-07 1.677194344205555e-14 1.664181054753588e-20
+            }
+            Solid {
+              translation 13.797600000000005 -0.0002278371486106323 -0.19666119878014998
+              rotation 0.9999999999999891 1.480364073008829e-07 4.6043628191624994e-11 3.204071356323163e-08
+              children [
+                DEF BallShape Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.776471 0.27451 0
+                    metalness 0
+                  }
+                  geometry Capsule {
+                    height 0.4
+                    radius 0.1
+                  }
+                }
+              ]
+              name "ball_red(8)"
+              immersionProperties [
+                ImmersionProperties {
+                  fluidName "fluid"
+                }
+              ]
+              boundingObject Capsule {
+                height 0.4
+                radius 0.1
+                subdivision 16
+              }
+              physics Physics {
+                density 400
+                centerOfMass [
+                  0 0 -1
+                ]
+                damping Damping {
+                  linear 0.5
+                  angular 0.5
+                }
+              }
+              linearVelocity 0 0 -2.767950467022178e-05
+              angularVelocity 6.834312227754634e-07 1.642951970427377e-13 -9.314097558653235e-21
+            }
+            Solid {
+              translation 15.727600000000006 -0.0002278371486106323 -0.19666119878014998
+              rotation 0.9999999999999829 1.854399611221537e-07 2.489404940818168e-11 3.2040713563231825e-08
+              children [
+                DEF BallShape Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.776471 0.27451 0
+                    metalness 0
+                  }
+                  geometry Capsule {
+                    height 0.4
+                    radius 0.1
+                  }
+                }
+              ]
+              name "ball_red(9)"
+              immersionProperties [
+                ImmersionProperties {
+                  fluidName "fluid"
+                }
+              ]
+              boundingObject Capsule {
+                height 0.4
+                radius 0.1
+                subdivision 16
+              }
+              physics Physics {
+                density 400
+                centerOfMass [
+                  0 0 -1
+                ]
+                damping Damping {
+                  linear 0.5
+                  angular 0.5
+                }
+              }
+              linearVelocity 0 0 -2.767950467022178e-05
+              angularVelocity 6.834312227754634e-07 1.8442478969949645e-13 -8.512402078054193e-21
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+DEF Docking Solid {
+  translation -12.45548893518848 -14.600855555236883 0.35000000000000003
+  rotation -1.0445237089478475e-16 8.162333793201056e-17 -1 1.5722290034552016
+  children [
+    Transform {
+      children [
+        Group {
+          children [
+            Transform {
+              translation 1.25 1.25 0
+              rotation 0 0 1 1.57
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    metalness 0
+                  }
+                  geometry Capsule {
+                    radius 0.3
+                  }
+                }
+              ]
+            }
+            Transform {
+              translation -1.25 1.25202 0
+              rotation 0 0 1 1.57
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.964706 0.960784 0.956863
+                    metalness 0
+                  }
+                  geometry Capsule {
+                    radius 0.3
+                  }
+                }
+              ]
+            }
+            Transform {
+              translation -3.75 1.25399 0
+              rotation 0 0 1 1.57
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.964706 0.960784 0.956863
+                    metalness 0
+                  }
+                  geometry Capsule {
+                    radius 0.3
+                  }
+                }
+              ]
+            }
+            Transform {
+              translation -6.25 1.25598 0
+              rotation 0 0 1 1.57
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.341176 0.890196 0.537255
+                    metalness 0
+                  }
+                  geometry Capsule {
+                    radius 0.3
+                  }
+                }
+              ]
+            }
+            Transform {
+              translation 1.25 0 0
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.803922 0.670588 0.560784
+                    metalness 0
+                  }
+                  geometry Box {
+                    size 2.5 2.5 2.5
+                  }
+                }
+              ]
+            }
+            Transform {
+              translation -2.51 0 0
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.803922 0.670588 0.560784
+                    metalness 0
+                  }
+                  geometry Box {
+                    size 2.5 2.5 2.5
+                  }
+                }
+              ]
+            }
+            Transform {
+              translation -5.02 0 0
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.803922 0.670588 0.560784
+                    metalness 0
+                  }
+                  geometry Box {
+                    size 2.5 2.5 2.5
+                  }
+                }
+              ]
+            }
+            Transform {
+              children [
+                Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.803922 0.670588 0.560784
+                    metalness 0
+                  }
+                  geometry Box {
+                    size 2.5 2.5 2.5
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  immersionProperties [
+    ImmersionProperties {
+      fluidName "fluid"
+    }
+  ]
+  boundingObject Transform {
+    translation -1.9 0 0
+    children [
+      Box {
+        size 8.75 2.5 1
+      }
+    ]
+  }
+  physics Physics {
+    density 500
+    damping Damping {
+      linear 0.5
+      angular 0.5
+    }
+  }
+}
 BlueBoat {
-  hidden linearVelocity_0 0 0 -0.003282025462417345
-  hidden angularVelocity_0 -1.201091359255235e-06 0.000934582194161254 -1.6623168415787043e-11
-  translation 0 0 0.3758901038313668
-  rotation 0.010190076776244303 6.5489928572368754e-06 0.9999480797983488 -3.140307370006951
+  hidden linearVelocity_0 0 0 -1.1351122911044782e-15
+  hidden angularVelocity_0 -1.850667235535606e-15 1.3192917195807156e-14 1.015478174414691e-17
+  translation 0 0 0.37600807753290416
+  rotation 0.010261972043642008 6.595115423398652e-06 0.9999473445568421 -3.140307370952353
   controller "ardupilot_vehicle_controller"
   controllerArgs [
     "--motors"
