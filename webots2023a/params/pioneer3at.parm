@@ -1,9 +1,9 @@
 FRAME_CLASS      1          # Rover
 
 SERVO1_FUNCTION  73         # (Throttle Left)
-SERVO2_FUNCTION  73         
-SERVO3_FUNCTION  74         # (Throttle Right)
-SERVO4_FUNCTION  74         
+SERVO2_FUNCTION  74         
+SERVO3_FUNCTION  0         # (Throttle Right)
+SERVO4_FUNCTION  0         
 
 AHRS_EKF_TYPE    10         # Use sim AHRS
 ARMING_CHECK	 1045534    # No RC requirements
