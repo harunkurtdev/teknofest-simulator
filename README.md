@@ -19,14 +19,14 @@ Her yıl yarışma kurallarına göre editlenerek temsili robotlar üzerinden ç
 
 Bu repoda yarışmayla ilgili kuralları ardupilot tabanlı kart üzerinden haberleştirerek, `ros2`, `ros` veya `mavlink` ile haberleştirerek çalıştırabilirsiniz.
 
-- İnsansız Deniz Aracı Görevi
+## İnsansız Deniz Aracı Görevi
 
 ### Kolay Görevi
-[](./docs/ida/ida_cok_kolay.png)
+![kolay](./docs/ida/ida_cok_kolay.png)
 
 ### Orta Görevi
-[](./docs/ida/ida_orta.png)
+![orta](./docs/ida/ida_orta.png)
 
 
 ### Zor Görevi
-[](./docs/ida/ida_en_zor.jpg)
+![en_zor](./docs/ida/ida_en_zor.jpg)
