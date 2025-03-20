@@ -1,3 +1,9 @@
 *.wbproj
 __pycache__
 worlds/.*
+
+webots2023a/.DS_Store
+webots2023a/controllers/.*.pyc
+webots2023a/controllers/.*.pyo
+webots2023a/controllers/.*.pyd
+webots2023a/controllers/__pycache__

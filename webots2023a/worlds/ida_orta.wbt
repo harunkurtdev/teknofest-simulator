@@ -6,12 +6,13 @@ EXTERNPROTO "../protos/BlueBoat.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/devices/nvidia/protos/JetsonNano.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/nvidia/jetbot/protos/JetBotRaspberryPiCamera.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/paintings/protos/LandscapePainting.proto"
+EXTERNPROTO "../protos/Iris.proto"
 
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.13028458702295714 0.0446670928919446 0.9904699779381705 2.555546136877596
-  position 40.4522111546203 -30.357714002476577 13.142665406008119
+  orientation -0.16541266585209977 0.03664970923467077 0.9855432252259237 2.765929955881915
+  position 48.46396531767307 -21.425823828301738 19.240235713416112
   follow "blueboat:NVIDIA Jetson Nano"
   followType "Mounted Shot"
 }
@@ -57,8 +58,8 @@ DEF bals Transform {
         Group {
           children [
             Solid {
-              translation 15.069600000000001 1.8702999999999985 -0.20333333333333337
-              rotation 0.99887928324662 0.04733051342124931 1.0838969522032641e-16 3.1415926535897922
+              translation 15.154689588628958 1.6922021518814905 -0.1966666666666665
+              rotation 0.9988792832464662 0.047330513424493396 4.640948222605125e-15 3.1415926535897714
               children [
                 DEF BallShape Shape {
                   appearance PBRAppearance {
@@ -79,25 +80,25 @@ DEF bals Transform {
               ]
               boundingObject Capsule {
                 height 0.4
-                radius 0.05
+                radius 0.1
                 subdivision 16
               }
               physics Physics {
                 density 400
                 centerOfMass [
-                  0 0 1
+                  0 0 0.2
                 ]
                 damping Damping {
                   linear 0.5
                   angular 0.5
                 }
               }
-              linearVelocity 0 0 8.864279492383399e-16
-              angularVelocity 2.4763910894388147e-14 -3.6532992232436844e-14 -7.458929687047842e-28
+              linearVelocity 0 0 -1.0167384095780582e-16
+              angularVelocity 6.715620306519953e-14 2.4322100189213815e-14 -8.026539602613678e-28
             }
             Solid {
-              translation 13.650399999999992 1.0025600000000061 -0.20333333333333337
-              rotation 0.99887928324662 0.04733051342124931 1.6690735791979717e-15 3.1415926535897922
+              translation 13.650399999999996 1.0025600000000097 -0.20333333333333303
+              rotation 0.9988792832466199 0.04733051342124932 2.26842038304298e-16 3.1415926535897905
               children [
                 DEF BallShape Shape {
                   appearance PBRAppearance {
@@ -131,12 +132,12 @@ DEF bals Transform {
                   angular 0.5
                 }
               }
-              linearVelocity 0 0 8.864279492383399e-16
-              angularVelocity -7.475317439618434e-14 -5.311327071311144e-14 2.9756288298425403e-27
+              linearVelocity 0 0 1.1130846934133324e-15
+              angularVelocity 1.3329210265166569e-15 -1.9164068185021595e-15 -8.9392732777203e-29
             }
             Solid {
-              translation 12.040099999999978 -0.1446699999996035 -0.20333333333333337
-              rotation 0.99887928324662 0.04733051342124931 -4.0333735536526227e-16 -3.1415926535897896
+              translation 12.040099999999972 -0.14466999999959818 -0.20333333333333303
+              rotation 0.9988792832466199 0.04733051342124932 2.0057445388861948e-15 3.1415926535897905
               children [
                 DEF BallShape Shape {
                   appearance PBRAppearance {
@@ -170,12 +171,12 @@ DEF bals Transform {
                   angular 0.5
                 }
               }
-              linearVelocity 0 0 -3.9301575337818722e-16
-              angularVelocity -8.912052691494103e-14 2.4985590486995538e-14 -2.514732772918699e-27
+              linearVelocity 0 0 1.1130846934133324e-15
+              angularVelocity -5.4864888904474015e-14 3.5040508734312452e-15 3.425092386736645e-27
             }
             Solid {
-              translation 10.601299999999997 -0.9643990000000056 -0.20333333333333337
-              rotation 0.99887928324662 0.04733051342124931 2.8548949168556143e-15 -3.141592653589788
+              translation 10.601299999999998 -0.964399000000002 -0.20333333333333303
+              rotation 0.9988792832466199 0.04733051342124932 1.4119311695827482e-15 -3.1415926535897913
               children [
                 DEF BallShape Shape {
                   appearance PBRAppearance {
@@ -209,12 +210,12 @@ DEF bals Transform {
                   angular 0.5
                 }
               }
-              linearVelocity 0 0 8.864279492383399e-16
-              angularVelocity -1.903851026084329e-15 -2.7898379869363417e-14 2.362981050415356e-27
+              linearVelocity 0 0 1.1130846934133324e-15
+              angularVelocity 3.219413985804572e-14 -1.853651347700275e-15 -1.2360910699005524e-27
             }
             Solid {
-              translation 8.822370000000003 -1.264009999999999 -0.20333333333333337
-              rotation 0.99887928324662 0.04733051342124931 -1.116531149378365e-15 3.1415926535897922
+              translation 8.822370000000001 -1.2640100000000025 -0.20333333333333303
+              rotation 0.9988792832466199 0.04733051342124932 9.770557782924241e-17 -3.141592653589792
               children [
                 DEF BallShape Shape {
                   appearance PBRAppearance {
@@ -248,12 +249,12 @@ DEF bals Transform {
                   angular 0.5
                 }
               }
-              linearVelocity 0 0 8.864279492383399e-16
-              angularVelocity 3.2963262862217285e-15 2.3097079577473685e-14 5.349746121169321e-28
+              linearVelocity 0 0 1.1130846934133324e-15
+              angularVelocity -1.6863781343620807e-15 3.110231564989941e-14 -6.057084668440616e-28
             }
             Solid {
-              translation 6.880250000000001 -1.3380099999999917 -0.20333333333333337
-              rotation 0.99887928324662 0.04733051342124931 -4.472102580765904e-16 3.1415926535897905
+              translation 6.88025 -1.3380099999999953 -0.20333333333333303
+              rotation 0.9988792832466199 0.04733051342124932 -8.172034981740252e-17 3.141592653589793
               children [
                 DEF BallShape Shape {
                   appearance PBRAppearance {
@@ -287,12 +288,12 @@ DEF bals Transform {
                   angular 0.5
                 }
               }
-              linearVelocity 0 0 8.864279492383399e-16
-              angularVelocity -1.3569380192817707e-14 -2.047925153231487e-14 -9.987600450949472e-28
+              linearVelocity 0 0 1.1130846934133324e-15
+              angularVelocity -1.8614113341040202e-15 4.134605103154602e-16 -3.624468843252815e-30
             }
             Solid {
-              translation 5.134719999999999 -1.3631599999999988 -0.20333333333333337
-              rotation 0.99887928324662 0.04733051342124931 1.1637661625715066e-15 3.141592653589792
+              translation 5.1347200000000015 -1.3631600000000006 -0.20333333333333303
+              rotation 0.9988792832466199 0.04733051342124932 -7.027415526712723e-18 3.1415926535897927
               children [
                 DEF BallShape Shape {
                   appearance PBRAppearance {
@@ -326,12 +327,12 @@ DEF bals Transform {
                   angular 0.5
                 }
               }
-              linearVelocity 0 0 8.864279492383399e-16
-              angularVelocity 2.941039452402613e-14 -3.319901750565099e-14 -1.6466285176487515e-27
+              linearVelocity 0 0 1.1130846934133324e-15
+              angularVelocity -2.990020799776912e-14 -1.6383019830164496e-14 -1.7649053552674864e-28
             }
             Solid {
-              translation 3.878019999999999 -2.0952300000000026 -0.20333333333333337
-              rotation 0.99887928324662 0.04733051342124931 1.8407580478984607e-16 -3.141592653589791
+              translation 3.8780199999999994 -2.095229999999999 -0.20333333333333303
+              rotation 0.9988792832466199 0.04733051342124932 -5.996901061757341e-17 3.141592653589792
               children [
                 DEF BallShape Shape {
                   appearance PBRAppearance {
@@ -365,12 +366,12 @@ DEF bals Transform {
                   angular 0.5
                 }
               }
-              linearVelocity 0 0 8.864279492383399e-16
-              angularVelocity -1.2188623841241013e-13 -6.793940827778563e-15 6.828358424944559e-28
+              linearVelocity 0 0 1.1130846934133324e-15
+              angularVelocity 3.203802550286996e-14 -7.594346049971808e-15 -1.193645410421488e-28
             }
             Solid {
-              translation 1.9977099999999994 -3.027320000000003 -0.20333333333333337
-              rotation 0.99887928324662 0.04733051342124931 1.3644977246008442e-16 -3.1415926535897905
+              translation 1.9977099999999997 -3.0273199999999996 -0.20333333333333303
+              rotation 0.9988792832466199 0.04733051342124932 -7.86943476154383e-18 3.1415926535897927
               children [
                 DEF BallShape Shape {
                   appearance PBRAppearance {
@@ -404,12 +405,12 @@ DEF bals Transform {
                   angular 0.5
                 }
               }
-              linearVelocity 0 0 8.864279492383399e-16
-              angularVelocity -4.717561062960411e-15 7.98691086125605e-15 -3.016871121063289e-28
+              linearVelocity 0 0 1.1130846934133324e-15
+              angularVelocity -5.666438114598552e-14 -3.775389824940734e-15 -2.3409687556956702e-29
             }
             Solid {
-              translation 0.34463600000000005 -4.0281099999999945 -0.20333333333333337
-              rotation 0.99887928324662 0.04733051342124931 2.5598137076460243e-17 -3.1415926535897927
+              translation 0.344636 -4.0281099999999945 -0.20333333333333303
+              rotation 0.9988792832466199 0.04733051342124932 5.0701868392403034e-17 -3.1415926535897922
               children [
                 DEF BallShape Shape {
                   appearance PBRAppearance {
@@ -443,12 +444,12 @@ DEF bals Transform {
                   angular 0.5
                 }
               }
-              linearVelocity 0 0 8.864279492383399e-16
-              angularVelocity 3.825698750003295e-15 -1.9381634131603496e-15 5.454224702671496e-30
+              linearVelocity 0 0 1.1130846934133324e-15
+              angularVelocity -1.2715074868001834e-33 3.445665793500687e-17 -2.8510790103646902e-31
             }
             Solid {
-              translation -1.43858 -5.453129999999991 -0.20333333333333325
-              rotation 0.99887928324662 0.04733051342124931 -1.94223564486401e-16 3.141592653589786
+              translation -1.4385799999999995 -5.4531299999999945 -0.20333333333333303
+              rotation 0.9988792832466199 0.04733051342124932 -2.435728370204477e-16 3.1415926535897913
               children [
                 DEF BallShape Shape {
                   appearance PBRAppearance {
@@ -482,12 +483,12 @@ DEF bals Transform {
                   angular 0.5
                 }
               }
-              linearVelocity 0 0 1.0935391652500454e-15
-              angularVelocity -1.1314737728939138e-13 -7.068415813312514e-15 -8.161701304050633e-28
+              linearVelocity 0 0 1.6146313253645122e-15
+              angularVelocity -3.6727443253204075e-15 3.4476862025690534e-15 7.30799152434229e-29
             }
             Solid {
-              translation -2.5337599999999996 -5.557209999999994 -0.20333333333333325
-              rotation 0.99887928324662 0.04733051342124931 -2.7628693697911683e-16 3.141592653589791
+              translation -2.53376 -5.557210000000001 -0.20333333333333303
+              rotation 0.9988792832466199 0.04733051342124932 1.225370093992595e-16 -3.14159265358979
               children [
                 DEF BallShape Shape {
                   appearance PBRAppearance {
@@ -521,12 +522,12 @@ DEF bals Transform {
                   angular 0.5
                 }
               }
-              linearVelocity 0 0 1.0935391652500454e-15
-              angularVelocity -1.163181754378764e-13 -1.7104373628285658e-15 -8.082668464382326e-28
+              linearVelocity 0 0 1.6146313253645122e-15
+              angularVelocity 5.5326212619860535e-14 3.7185892634465975e-16 -9.811431515054912e-29
             }
             Solid {
-              translation -4.02615 -5.920099999999991 -0.20333333333333325
-              rotation 0.99887928324662 0.04733051342124931 -5.560777879597671e-17 3.14159265358979
+              translation -4.02615 -5.920099999999998 -0.20333333333333303
+              rotation 0.9988792832466199 0.04733051342124932 7.229475119555183e-17 -3.141592653589791
               children [
                 DEF BallShape Shape {
                   appearance PBRAppearance {
@@ -560,8 +561,8 @@ DEF bals Transform {
                   angular 0.5
                 }
               }
-              linearVelocity 0 0 1.0935391652500454e-15
-              angularVelocity 1.7289931152756172e-14 -3.079148992179248e-15 -1.4979039946142206e-28
+              linearVelocity 0 0 1.6146313253645122e-15
+              angularVelocity 5.5326212619860535e-14 -2.041628462493732e-30 -3.3700017825484506e-29
             }
           ]
         }
@@ -573,8 +574,8 @@ DEF bals Transform {
         Group {
           children [
             Solid {
-              translation 14.589399999999998 2.7749900000000025 -0.19666666666666677
-              rotation -1.1547751301760318e-16 -3.074658926225277e-16 1 1.6471853071795861
+              translation 14.589399999999998 2.7749900000000025 -0.19666666666666666
+              rotation 1.548384622485001e-16 -5.9926189445425395e-16 1 1.6471853071795861
               children [
                 DEF BallShape Shape {
                   appearance PBRAppearance {
@@ -608,12 +609,12 @@ DEF bals Transform {
                   angular 0.5
                 }
               }
-              linearVelocity 0 0 1.0784478437438903e-15
-              angularVelocity -1.3666986550074773e-14 2.249461496692462e-14 4.763924772277892e-30
+              linearVelocity 0 0 -1.5418728848102997e-15
+              angularVelocity -2.1344059631566242e-14 -4.186550668143358e-43 4.235132971021002e-29
             }
             Solid {
               translation 13.326500000000005 0.3136270000000003 -0.19666666666666643
-              rotation -2.584178328414228e-15 1.398117105928325e-15 0.9999999999999999 1.9089865556717218
+              rotation -2.107292337611473e-15 7.248750186908609e-16 0.9999999999999999 1.9089865556717218
               children [
                 DEF BallShape Shape {
                   appearance PBRAppearance {
@@ -647,11 +648,11 @@ DEF bals Transform {
                   angular 0.5
                 }
               }
-              linearVelocity 0 0 -1.130597189860464e-16
-              angularVelocity -4.7422165031348016e-14 -2.1988908617720833e-14 2.8148864928989477e-29
+              linearVelocity 0 0 2.010818405503588e-17
+              angularVelocity -8.469902789695017e-14 -3.3559606489947566e-30 8.279577590508826e-28
             }
             Solid {
-              translation 8.538969999999999 -0.723484999999993 -0.19666666666666677
+              translation 8.538969999999999 -0.723484999999993 -0.19666666666666666
               rotation 2.936057869665999e-16 -7.175485695781934e-16 1 1.9089865556717236
               children [
                 DEF BallShape Shape {
@@ -686,12 +687,11 @@ DEF bals Transform {
                   angular 0.5
                 }
               }
-              linearVelocity 0 0 1.0784478437438903e-15
-              angularVelocity 2.1139018289982065e-14 2.8203796266504124e-14 -1.8792753033367023e-28
+              linearVelocity 0 0 -1.5418728848102997e-15
             }
             Solid {
-              translation 4.950960000000001 -0.25754300000001074 -0.19666666666666655
-              rotation -5.181915452800751e-16 2.1151680103979775e-15 1 1.9089865556717167
+              translation 4.950960000000002 -0.2575430000000143 -0.19666666666666655
+              rotation 6.312676483356511e-16 6.442710598840655e-16 1 1.9089865556717167
               children [
                 DEF BallShape Shape {
                   appearance PBRAppearance {
@@ -725,12 +725,12 @@ DEF bals Transform {
                   angular 0.5
                 }
               }
-              linearVelocity 0 0 -1.5674582066266653e-15
-              angularVelocity 7.898845549896618e-15 1.2010939907109213e-15 6.576520248301089e-29
+              linearVelocity 0 0 -5.546113037403151e-16
+              angularVelocity -2.3030203665361056e-14 -3.151419458165328e-14 -1.9172617274898152e-28
             }
             Solid {
-              translation 2.14312 -1.8281299999999874 -0.19666666666666677
-              rotation 1.7999684943858465e-16 -7.524762528229609e-16 1 1.9089865556717236
+              translation 2.1431200000000006 -1.8281299999999874 -0.19666666666666666
+              rotation 3.708894039021915e-16 -6.172589414012341e-16 1 1.9089865556717236
               children [
                 DEF BallShape Shape {
                   appearance PBRAppearance {
@@ -764,12 +764,12 @@ DEF bals Transform {
                   angular 0.5
                 }
               }
-              linearVelocity 0 0 1.0784478437438903e-15
-              angularVelocity 3.6162796345582256e-14 -1.1126674493329067e-15 -7.229113222338527e-29
+              linearVelocity 0 0 -1.5418728848102997e-15
+              angularVelocity 2.650520604597533e-44 4.974279453093402e-15 -2.684651456021445e-29
             }
             Solid {
-              translation 0.705804 -4.4325999999999866 -0.19666666666666677
-              rotation 2.7283185281626824e-16 -7.052628594275404e-16 1 1.9089865556717236
+              translation 0.7058040000000004 -4.4325999999999866 -0.19666666666666666
+              rotation 5.065780769899013e-16 -5.396904719822689e-16 1 1.9089865556717236
               children [
                 DEF BallShape Shape {
                   appearance PBRAppearance {
@@ -803,12 +803,12 @@ DEF bals Transform {
                   angular 0.5
                 }
               }
-              linearVelocity 0 0 1.0784478437438903e-15
-              angularVelocity 1.351208959645206e-44 -3.3983624555350396e-15 1.8727729061329258e-29
+              linearVelocity 0 0 -1.5418728848102997e-15
+              angularVelocity 7.845120300944077e-45 2.2975259479165525e-15 -1.2661228467210803e-29
             }
             Solid {
-              translation -1.42617 -5.182469999999981 -0.19666666666666677
-              rotation -9.719196422665213e-16 1.1589040627899622e-15 1 1.9089865556717236
+              translation -1.4261699999999995 -5.182469999999988 -0.19666666666666666
+              rotation 1.4090686412399748e-15 -1.793162732700974e-15 1 1.9089865556717236
               children [
                 DEF BallShape Shape {
                   appearance PBRAppearance {
@@ -842,8 +842,8 @@ DEF bals Transform {
                   angular 0.5
                 }
               }
-              linearVelocity 0 0 1.0784478437438903e-15
-              angularVelocity -8.875673452826395e-14 2.117113211130188e-15 1.0619623333516347e-28
+              linearVelocity 0 0 -1.5418728848102997e-15
+              angularVelocity 3.7653131298435e-14 2.3533207061521874e-15 -8.211758405926178e-30
             }
           ]
         }
@@ -855,8 +855,8 @@ DEF bals Transform {
         Group {
           children [
             Solid {
-              translation -1.8124099999999999 -4.760229999999996 -0.19666666666666677
-              rotation -0.9993900640393932 0.0349210182310888 0.00014961631385551047 3.536670556930361e-15
+              translation -1.8124099999999999 -4.7602300000000035 -0.19666666666666666
+              rotation 0.9954593170094993 0.0951877537460549 0.0001992881370522764 2.655168640414056e-15
               children [
                 DEF BallShape Shape {
                   appearance PBRAppearance {
@@ -890,12 +890,12 @@ DEF bals Transform {
                   angular 0.5
                 }
               }
-              linearVelocity 0 0 1.0784478437438903e-15
-              angularVelocity -3.7939063794355894e-14 -1.609808666114562e-16 -2.4198909574973088e-29
+              linearVelocity 0 0 -1.5418728848102997e-15
+              angularVelocity 3.765313129843499e-14 5.147406433001035e-15 -1.8829716946535388e-29
             }
             Solid {
-              translation -3.1624099999999995 -4.760229999999996 -0.19666666666666677
-              rotation -0.9947542404606442 0.10229359172361635 0.00014892229189272365 3.553152397460634e-15
+              translation -3.1624100000000004 -4.7602300000000035 -0.19666666666666666
+              rotation 0.9784689641959552 -0.20639391399382617 0.0001958867114042196 2.7012735794880955e-15
               children [
                 DEF BallShape Shape {
                   appearance PBRAppearance {
@@ -929,12 +929,12 @@ DEF bals Transform {
                   angular 0.5
                 }
               }
-              linearVelocity 0 0 1.0784478437438903e-15
-              angularVelocity -3.7939063794355894e-14 -5.362587457860789e-15 -1.5079311823194128e-28
+              linearVelocity 0 0 -1.5418728848102997e-15
+              angularVelocity 3.765313129843499e-14 -4.604644841179558e-15 -4.0627733138078344e-29
             }
             Solid {
-              translation 0.09758999999999987 -4.35023 -0.19666666666666677
-              rotation 0.9999991019133792 -0.0012787154555299672 0.0004013218399096013 1.3593276859075566e-15
+              translation 0.09758999999999987 -4.35023 -0.19666666666666666
+              rotation 0.9999991019133792 -0.0012787154555299672 0.00040132183990960124 1.3593276859075568e-15
               children [
                 DEF BallShape Shape {
                   appearance PBRAppearance {
@@ -968,12 +968,11 @@ DEF bals Transform {
                   angular 0.5
                 }
               }
-              linearVelocity 0 0 1.0784478437438903e-15
-              angularVelocity -1.8597860762335474e-15 -1.7282230120685616e-16 1.0967645846715928e-30
+              linearVelocity 0 0 -1.5418728848102997e-15
             }
             Solid {
-              translation 2.3075900000000003 -2.6002300000000034 -0.19666666666666677
-              rotation 0.9958001719709759 0.09155320283550486 0.00016897673190554416 3.164017197111918e-15
+              translation 2.3075899999999994 -2.6002299999999963 -0.19666666666666666
+              rotation -0.987530858639809 -0.15742545159100496 0.00017442903881518501 3.065116274814797e-15
               children [
                 DEF BallShape Shape {
                   appearance PBRAppearance {
@@ -1007,12 +1006,12 @@ DEF bals Transform {
                   angular 0.5
                 }
               }
-              linearVelocity 0 0 1.0784478437438903e-15
-              angularVelocity -6.367424691216833e-15 1.919201203065768e-16 -1.1279108262105864e-29
+              linearVelocity 0 0 -1.5418728848102997e-15
+              angularVelocity -3.765313129843499e-14 -4.706641412304374e-15 1.8062514324251055e-29
             }
             Solid {
-              translation 3.847589999999999 -1.770229999999998 -0.19666666666666677
-              rotation -0.9792811887918588 -0.20250505969008512 0.00023254745531344425 2.751749779633847e-15
+              translation 3.847589999999999 -1.7702300000000015 -0.19666666666666666
+              rotation 0.7451963507096149 -0.6668437896829952 0.0013262919339266492 4.8248233580416715e-16
               children [
                 DEF BallShape Shape {
                   appearance PBRAppearance {
@@ -1046,12 +1045,12 @@ DEF bals Transform {
                   angular 0.5
                 }
               }
-              linearVelocity 0 0 1.0784478437438903e-15
-              angularVelocity -4.377072664855794e-14 1.4440722472697433e-15 1.3024760340942218e-28
+              linearVelocity 0 0 -1.5418728848102997e-15
+              angularVelocity 3.979423562474721e-14 -5.3974405433960875e-15 -5.002602267906346e-29
             }
             Solid {
-              translation 5.16759 -0.770229999999998 -0.19666666666666677
-              rotation -0.9978311410965165 -0.06582523371943681 0.00022904978806554042 3.172072059945114e-15
+              translation 5.167590000000001 -0.7702300000000015 -0.19666666666666666
+              rotation -0.12689562045364908 0.9919157275181348 0.0008312712270173154 8.74036562026472e-16
               children [
                 DEF BallShape Shape {
                   appearance PBRAppearance {
@@ -1085,8 +1084,8 @@ DEF bals Transform {
                   angular 0.5
                 }
               }
-              linearVelocity 0 0 1.0784478437438903e-15
-              angularVelocity -3.8403687655479064e-15 -2.100671247019273e-14 -3.025123962825513e-28
+              linearVelocity 0 0 -1.5418728848102997e-15
+              angularVelocity 3.979423562474721e-14 9.734538764004359e-15 1.6385574331874061e-28
             }
             Solid {
               translation 6.85759 -0.00022780510789743857 -0.19666666666666666
@@ -1124,7 +1123,7 @@ DEF bals Transform {
                   angular 0.5
                 }
               }
-              linearVelocity 0 0 7.584102273790375e-16
+              linearVelocity 0 0 1.2969995585637685e-15
             }
             Solid {
               translation 8.38759 -0.00022780510789743857 -0.19666666666666666
@@ -1162,11 +1161,11 @@ DEF bals Transform {
                   angular 0.5
                 }
               }
-              linearVelocity 0 0 7.584102273790375e-16
+              linearVelocity 0 0 1.2969995585637685e-15
             }
             Solid {
-              translation 10.386150074908077 -0.010327078449314797 -0.19666666666666732
-              rotation 6.722656652332922e-10 1.000866066653841e-09 1 2.1971293287610246e-06
+              translation 10.386150074908079 -0.010327078449311244 -0.19666666666666732
+              rotation -1.9395751429088368e-09 1.5106357364686418e-09 1 2.1971293287610246e-06
               children [
                 DEF BallShape Shape {
                   appearance PBRAppearance {
@@ -1200,12 +1199,12 @@ DEF bals Transform {
                   angular 0.5
                 }
               }
-              linearVelocity 0 0 7.136621543082481e-16
-              angularVelocity -1.4878339290392858e-15 4.164352864376127e-14 -2.9833568241146384e-28
+              linearVelocity 0 0 -1.6754743116424551e-15
+              angularVelocity -7.984211814485347e-14 8.300819623968963e-14 4.08666192645894e-28
             }
             Solid {
-              translation 11.887599999999997 0.8197720000000004 -0.19666666666666677
-              rotation 0.2710861419008433 -0.9625549905880755 0.00044018553542519566 2.6407273974794607e-15
+              translation 11.887599999999999 0.8197720000000004 -0.19666666666666666
+              rotation 0.7542681114137185 -0.6565653935787301 0.0012247690352108196 9.490850682429389e-16
               children [
                 DEF BallShape Shape {
                   appearance PBRAppearance {
@@ -1239,12 +1238,12 @@ DEF bals Transform {
                   angular 0.5
                 }
               }
-              linearVelocity 0 0 1.0784478437438903e-15
-              angularVelocity -3.842683843902384e-15 -3.2055587721108624e-14 1.5066103937061038e-28
+              linearVelocity 0 0 -1.5418728848102997e-15
+              angularVelocity 2.665475228791762e-43 1.9628691170424074e-14 -6.471078707021618e-29
             }
             Solid {
-              translation 14.647599999999999 2.56977 -0.19666666666666677
-              rotation 0.722980793419558 -0.6908679426224439 0.0005081368499275472 2.904934671395113e-15
+              translation 14.647600000000002 2.569770000000002 -0.19666666666666666
+              rotation 0.6278473929337571 0.7783354595600148 0.0012504310395833563 1.1804767269192978e-15
               children [
                 DEF BallShape Shape {
                   appearance PBRAppearance {
@@ -1278,12 +1277,12 @@ DEF bals Transform {
                   angular 0.5
                 }
               }
-              linearVelocity 0 0 1.0784478437438903e-15
-              angularVelocity 6.337010002315258e-14 -2.3445540846822497e-14 -3.5892735304641867e-28
+              linearVelocity 0 0 -1.5418728848102997e-15
+              angularVelocity -4.095634240488324e-14 3.988235721282565e-14 -3.094283094947907e-28
             }
             Solid {
-              translation 16.09759999999999 3.259770000000003 -0.19666666666666677
-              rotation -0.23580133019295166 -0.9718012758621694 0.00011363051666208288 7.016499721468403e-15
+              translation 16.097599999999996 3.2597700000000014 -0.19666666666666666
+              rotation 0.6054466919465377 0.7958851173659216 0.0010877345390787026 7.329824593333718e-16
               children [
                 DEF BallShape Shape {
                   appearance PBRAppearance {
@@ -1317,8 +1316,8 @@ DEF bals Transform {
                   angular 0.5
                 }
               }
-              linearVelocity 0 0 1.0784478437438903e-15
-              angularVelocity 3.850199020009465e-15 -1.970706295391456e-13 -1.622464072233467e-27
+              linearVelocity 0 0 -1.5418728848102997e-15
+              angularVelocity -1.4384066820224453e-15 -4.696219727477364e-14 9.211376273731924e-29
             }
           ]
         }
@@ -1500,14 +1499,12 @@ DEF Docking Solid {
       angular 0.5
     }
   }
-  linearVelocity 2.753137489876938e-198 -7.472329918334405e-198 -1.5427293688339647e-162
-  angularVelocity -2.1650142527687577e-164 1.55823973020427e-162 5.485232905505597e-180
 }
 BlueBoat {
-  hidden linearVelocity_0 0 0 4.607085889479227e-15
-  hidden angularVelocity_0 2.625096069526541e-14 -9.14271120282115e-15 1.1665419167331114e-16
-  translation 20.7311 -5.45962 0.37600807753290383
-  rotation -0.010260347142593997 -0.017794913490290387 -0.9997890109069946 1.046237544212883
+  hidden linearVelocity_0 0 0 1.21571802785767e-15
+  hidden angularVelocity_0 -6.291327808869015e-16 -1.298723180640669e-14 6.049373657834538e-17
+  translation 20.7237 -5.53243 0.37600807753290433
+  rotation -0.010260347142584466 -0.017794913525361472 -0.9997890109063705 1.0462375425071948
   controller "ardupilot_vehicle_controller"
   controllerArgs [
     "--motors"
@@ -1524,6 +1521,22 @@ BlueBoat {
     "localhost"
   ]
   extensionSlot [
+    Solid {
+      translation -0.07 0 0.09
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0.837415 0.788525 0
+            }
+          }
+          geometry DEF plane_gemi Box {
+            size 0.75 0.75 0.02
+          }
+        }
+      ]
+      boundingObject USE plane_gemi
+    }
     JetsonNano {
       translation 0.17 0.36 0.08
       rotation 0 0 1 -1.5707953071795862
@@ -1542,4 +1555,8 @@ BlueBoat {
     Gyro {
     }
   ]
+}
+Iris {
+  translation 20.630934600529443 -5.419206734183247 0.5287041562896453
+  rotation -0.01028682423707201 0.005909295331738103 0.9999296282618081 2.092389788531533
 }
