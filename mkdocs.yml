@@ -10,23 +10,23 @@ nav:
   - Installation:
       - Requirements: installation/requirements.md
       - Setup: installation/setup.md
-  - Usage:
-      - Connecting Webots and Simulink: usage/connecting.md
-      - Running Simulations: usage/running.md
-      - Customizing the Bridge: usage/customization.md
-      # - Data Exchange: usage/data_exchange.md
-  - Advanced:
-      - Debugging: advanced/debugging.md
-      - Export ROS2 Package: advanced/export-ros2.md
-  - Examples:
-      - Inverted Pendulum Example: examples/inverted-pendulum.md
-      - Rotary Inverted Pendulum Example: examples/rotary-inverted-pendulum.md
-      - Wheel Chair Example: examples/wheel-chair.md
-      - Crazyflie Drone Example: examples/crazyflie-drone.md
-      - BlueBoat USV Example: examples/blueboat-usv.md
-  - Troubleshooting: troubleshooting.md
-  - FAQ: faq.md
-  - References: references.md
+  # - Usage:
+  #     - Connecting Webots and Simulink: usage/connecting.md
+  #     - Running Simulations: usage/running.md
+  #     - Customizing the Bridge: usage/customization.md
+  #     # - Data Exchange: usage/data_exchange.md
+  # - Advanced:
+  #     - Debugging: advanced/debugging.md
+  #     - Export ROS2 Package: advanced/export-ros2.md
+  # - Examples:
+  #     - Inverted Pendulum Example: examples/inverted-pendulum.md
+  #     - Rotary Inverted Pendulum Example: examples/rotary-inverted-pendulum.md
+  #     - Wheel Chair Example: examples/wheel-chair.md
+  #     - Crazyflie Drone Example: examples/crazyflie-drone.md
+  #     - BlueBoat USV Example: examples/blueboat-usv.md
+  # - Troubleshooting: troubleshooting.md
+  # - FAQ: faq.md
+  # - References: references.md
 
 theme:
   name: material
