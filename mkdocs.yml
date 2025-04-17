@@ -2,14 +2,21 @@ site_name: Teknofest Simulator
 site_url: https://harunkurtdev.github.io/teknofest-simulator
 site_description: Teknofest Simulator
 site_author: Harun KURT
-site_logo: ../assets/images/logo.png
-site_language: tr
 
 nav:
   - Home: index.md
   - Installation:
       - Requirements: installation/requirements.md
       - Setup: installation/setup.md
+  - Tarimsal İnsansiz Araçlar:
+      - Tarimsal İnsansiz Araci Görevi: tika/tika.md
+      - Tarimsal İnsansiz Araci Görev Çözümü: tika/tika-apply.md
+  - İnsansiz Deniz Araci Yarişmasi:
+      - İnsansiz Deniz Araci Yarişmasi Görevi: ida/ida.md
+      - İnsansiz Deniz Araci Yarişmasi Görev Çözümü: ida/ida-apply.md
+  - İnsansiz Kara Araci Yarişmasi:
+      - İnsansiz Kara Araci Yarişmasi Görevi: ika/ika.md
+      - İnsansiz Kara Araci Yarişmasi Görev Çözümü: ika/ika-apply.md
   # - Usage:
   #     - Connecting Webots and Simulink: usage/connecting.md
   #     - Running Simulations: usage/running.md
@@ -33,8 +40,8 @@ theme:
   font:
     text: Merriweather Sans
     code: Red Hat Mono
-  # logo: assets/logo.png
-  # favicon: assets/favicon.ico
+  logo: assets/images/logo.png
+  favicon: assets/images/favicon.ico
   features:
     - navigation.footer
   palette:
